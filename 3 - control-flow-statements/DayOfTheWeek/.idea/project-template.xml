@@ -1,0 +1,3 @@
+<template>
+  <input-field default="io.github.ds4647318">IJ_BASE_PACKAGE</input-field>
+</template>
