@@ -6,6 +6,8 @@ public class Main {
 
         Car porsche = new Car();
         Car holden = new Car();
+        porsche.setModel("commodore");
+        System.out.println("Model is " + porsche.getModel());
 
     }
 }
