@@ -22,6 +22,13 @@ public class Account {
         this.phoneNumber = phoneNumber;
     }
 
+    public Account(String customerName, String email, String phoneNumber) {
+        this("99999", 100.55, customerName, email, phoneNumber);
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
     public String getAccountNumber() {
         return accountNumber;
     }
@@ -70,9 +77,11 @@ public class Account {
     public void withdrawFunds (double withdraw) {
         if (this.balance < withdraw) {
             System.out.println("Only " + this.balance + " available. Withdrawal not processed");
+        } else if (withdraw < 0) {
+            System.out.println("Invalid Ammount");
         } else {
             this.balance -= withdraw;
-            System.out.println("Withdrawal of " + withdraw + " procesed. Remaining balance = " + this.balance);
+            System.out.println("Withdrawal of " + withdraw + " processed. Remaining balance = " + this.balance);
         }
 
     }
